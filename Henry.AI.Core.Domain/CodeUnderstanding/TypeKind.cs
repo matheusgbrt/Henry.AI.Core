@@ -7,5 +7,6 @@ public enum TypeKind
     Struct = 2,
     Enum = 3,
     Delegate = 4,
-    Record = 5
+    Record = 5,
+    NotFound=99
 }

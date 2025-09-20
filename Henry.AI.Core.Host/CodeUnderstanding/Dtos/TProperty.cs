@@ -17,9 +17,10 @@ public class TProperty
     [JsonPropertyName("Description")]
     public string Description { get; set; } = string.Empty;
 
-    public PropertyNode ToProperty(string className)
+    public PropertyNode ToProperty(string className,string namespc)
     {
         var property = new PropertyNode();
+        property.Namespace = namespc;
         property.Name = Name;
         property.Type = Type;
         property.Accessibility = Accessibility;

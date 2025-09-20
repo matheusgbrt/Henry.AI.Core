@@ -7,4 +7,6 @@ public interface IConstructorRepository
 {
     Task Create<T>(T entity) where T : INeo4JEntity;
     Task<T?> Find<T>(T classToFind) where T : INeo4JEntity;
+    
+    Task Delete(ConstructorNode node);
 }

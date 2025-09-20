@@ -6,6 +6,8 @@ namespace Henry.AI.Core.Domain.CodeUnderstanding.MappedEntities;
 
 public class PropertyNode: INeo4JEntity
 {
+    public string Id { get; set; } = Guid.NewGuid().ToString();
+    public string Namespace { get; set; } = string.Empty;
     public string ClassName { get; set; } = string.Empty;
     public string Name { get; set; } = string.Empty;
     public string Type { get; set; } = string.Empty;
@@ -14,18 +16,20 @@ public class PropertyNode: INeo4JEntity
     public List<Annotation> Annotations { get; set; } = new List<Annotation>();
     public string ToCypherCreate()
     {
-        return "(entity:PropertyNode {ClassName:$ClassName, Name:$Name, Type:$Type, Description:$Description, Accessibility:$Accessibility, Annotations:$Annotations})";
+        return "(entity:PropertyNode {Id:$Id,Namespace:$Namespace,ClassName:$ClassName, Name:$Name, Type:$Type, Description:$Description, Accessibility:$Accessibility, Annotations:$Annotations})";
     }
 
     public string ToCypherSearch()
     {
-        return "(entity:PropertyNode {ClassName:$ClassName, Name:$Name})";
+        return "(entity:PropertyNode {Namespace:$Namespace, ClassName:$ClassName, Name:$Name})";
     }
 
     public Dictionary<string, object?> ToCypherParameters()
     {
         return new Dictionary<string, object?>
         {
+            ["Id"] = Id,
+            ["Namespace"] = Namespace,
             ["ClassName"] = ClassName,
             ["Name"] = Name,
             ["Type"] = Type,

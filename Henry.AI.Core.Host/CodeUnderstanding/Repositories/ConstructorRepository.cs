@@ -12,5 +12,14 @@ public class ConstructorRepository : BaseRepository, IConstructorRepository, ITr
     public ConstructorRepository(IGraphClient graphClient) : base(graphClient)
     {
     }
-    
+
+    public async Task Delete(ConstructorNode node)
+    {
+        await GraphClient.Cypher
+            .Match("(c:ConstructorNode)")
+            .Where((ConstructorNode c) => c.ClassName == node.ClassName &&
+                                          c.Namespace == node.Namespace)
+            .DetachDelete("c")
+            .ExecuteWithoutResultsAsync();
+    }
 }

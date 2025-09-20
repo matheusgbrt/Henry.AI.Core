@@ -21,11 +21,12 @@ public class TMethod
     [JsonPropertyName("Description")]
     public string Description { get; set; } = string.Empty;
 
-    public MethodNode ToMethod(string className)
+    public MethodNode ToMethod(string className,string namespc)
     {
         var method = new MethodNode();
         method.Name = Name;
         method.Returns = Return;
+        method.Namespace = namespc;
         method.Parameters = Parameters.Select(p => p.ToParameter()).ToList();
         method.Annotations = Annotations.Select(a => a.ToAnnotation()).ToList();
         method.Description = Description;

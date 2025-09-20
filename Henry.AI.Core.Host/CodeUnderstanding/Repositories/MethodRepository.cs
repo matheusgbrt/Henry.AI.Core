@@ -12,5 +12,14 @@ public class MethodRepository : BaseRepository, IMethodRepository, ITransientDep
     public MethodRepository(IGraphClient graphClient) : base(graphClient)
     {
     }
-    
+    public async Task Delete(MethodNode node)
+    {
+        await GraphClient.Cypher
+            .Match("(c:MethodNode)")
+            .Where((MethodNode c) => c.Namespace == node.Namespace &&
+                                     c.ClassName == node.ClassName &&
+                                     c.Name  == node.Name)
+            .DetachDelete("c")
+            .ExecuteWithoutResultsAsync();
+    }
 }

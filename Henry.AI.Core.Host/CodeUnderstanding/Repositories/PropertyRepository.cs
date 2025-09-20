@@ -12,5 +12,14 @@ public class PropertyRepository : BaseRepository, IPropertyRepository, ITransien
     public PropertyRepository(IGraphClient graphClient) : base(graphClient)
     {
     }
-    
+    public async Task Delete(PropertyNode node)
+    {
+        await GraphClient.Cypher
+            .Match("(c:PropertyNode)")
+            .Where((PropertyNode c) => c.Namespace == node.Namespace &&
+                                     c.ClassName == node.ClassName &&
+                                     c.Name  == node.Name)
+            .DetachDelete("c")
+            .ExecuteWithoutResultsAsync();
+    }
 }

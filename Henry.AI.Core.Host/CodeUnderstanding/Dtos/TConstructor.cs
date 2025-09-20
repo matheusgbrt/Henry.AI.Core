@@ -12,11 +12,12 @@ public class TConstructor
     public string Description { get; set; } = string.Empty;
 
 
-    public ConstructorNode ToConstructor(string className)
+    public ConstructorNode ToConstructor(string className,string namespc)
     {
         var constructor = new ConstructorNode();
         constructor.Description = Description;
         constructor.ClassName = className;
+        constructor.Namespace = namespc;
         constructor.Parameters = Parameters.Select(p => p.ToParameter()).ToList();
         return constructor;
     }

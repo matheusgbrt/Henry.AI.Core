@@ -41,7 +41,7 @@ public class TClass
         var classEntity = new ClassNode();
         classEntity.Name = Name;
         classEntity.Namespace = namespc;
-        classEntity.Kind = TypeKindHelper.GetTypeKindFromString(Type);
+        classEntity.KindString = Type.ToUpperInvariant();
         classEntity.Description = Description;
         return classEntity;
     }

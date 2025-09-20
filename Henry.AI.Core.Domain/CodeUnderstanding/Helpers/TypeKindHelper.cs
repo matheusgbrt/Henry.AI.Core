@@ -14,8 +14,7 @@ public static class TypeKindHelper
                 "ENUMERATE"  => TypeKind.Enum, 
                 "DELEGATE"   => TypeKind.Delegate,
                 "RECORD"     => TypeKind.Record,
-                _ => throw new ArgumentOutOfRangeException(nameof(kindString),
-                    $"Unsupported kind: {kindString}")
+                _ => TypeKind.NotFound
             };
 
     public static string ToStringValue(this TypeKind kind) =>
@@ -27,6 +26,7 @@ public static class TypeKindHelper
             TypeKind.Enum      => "ENUM",
             TypeKind.Delegate  => "DELEGATE",
             TypeKind.Record    => "RECORD",
+            TypeKind.NotFound    => "NOT_FOUND",
             _ => throw new ArgumentOutOfRangeException(
                 nameof(kind), $"Unsupported kind: {kind}")
         };
