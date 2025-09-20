@@ -9,8 +9,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Henry.AI.Core.Host", "Henry
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Henry.AI.Core.Infrastructure", "Henry.AI.Core.Infrastructure\Henry.AI.Core.Infrastructure.csproj", "{7D323543-5E7B-4DF8-A1F4-E9794CDA3B47}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Henry.AI.Core.ExternalDependencies", "Henry.AI.Core.ExternalDependencies\Henry.AI.Core.ExternalDependencies.csproj", "{1F3043C2-1D17-42E6-BB6B-6D4F2EE93892}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -32,9 +30,5 @@ Global
 		{7D323543-5E7B-4DF8-A1F4-E9794CDA3B47}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7D323543-5E7B-4DF8-A1F4-E9794CDA3B47}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7D323543-5E7B-4DF8-A1F4-E9794CDA3B47}.Release|Any CPU.Build.0 = Release|Any CPU
-		{1F3043C2-1D17-42E6-BB6B-6D4F2EE93892}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{1F3043C2-1D17-42E6-BB6B-6D4F2EE93892}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{1F3043C2-1D17-42E6-BB6B-6D4F2EE93892}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{1F3043C2-1D17-42E6-BB6B-6D4F2EE93892}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

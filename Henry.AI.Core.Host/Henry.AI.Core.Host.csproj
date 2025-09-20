@@ -18,7 +18,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Henry.AI.Core.ExternalDependencies\Henry.AI.Core.ExternalDependencies.csproj" />
     <ProjectReference Include="..\Henry.AI.Core.Infrastructure\Henry.AI.Core.Infrastructure.csproj" />
     <ProjectReference Include="..\Henry.AI.Core.Domain\Henry.AI.Core.Domain.csproj" />
   </ItemGroup>
