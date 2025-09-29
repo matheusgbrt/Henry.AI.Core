@@ -1,5 +1,4 @@
 ﻿using System.Text.Json.Serialization;
-using Consul;
 using Henry.AI.Core.Domain.CodeUnderstanding;
 using Henry.AI.Core.Domain.CodeUnderstanding.Helpers;
 using Henry.AI.Core.Domain.CodeUnderstanding.MappedEntities;

@@ -5,12 +5,22 @@
       "commandName": "Project",
       "dotnetRunMessages": true,
       "launchBrowser": false,
+      "applicationUrl": "http://0.0.0.0:5000",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development",
-        "URL-CONSUL": "http://matheus.bertaiolli.com:8500",
-        "URL-GATEWAY": "http://matheus.bertaiolli.com:9999",
+
+        "URL_CONSUL": "http://74.50.120.4:8500",
+        "URL_GATEWAY": "http://74.50.120.4:9999",
+
         "SERVICE_ADVERTISE_HOST": "10.8.0.2",
-        "SERVICE_ADVERTISE_PORT": "5224"
+        "SERVICE_ADVERTISE_PORT": "5224",
+
+        "Neo4j__Uri": "",
+        "Neo4j__User": "",
+        "Neo4j__Password": "",
+
+        "ServiceBus__ConnectionString": "",
+        "AppId": "Henry.AI.Core"
       }
     }
   }
