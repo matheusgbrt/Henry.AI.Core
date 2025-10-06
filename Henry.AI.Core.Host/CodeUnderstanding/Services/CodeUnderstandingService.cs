@@ -4,7 +4,7 @@ using Rebus.Bus;
 
 namespace Henry.AI.Core.Host.CodeUnderstanding.Services;
 
-public class CodeUnderstandingService : ICodeUnderstandingService,ITransientDependency
+public class CodeUnderstandingService : ICodeUnderstandingService,ITransientDependency 
 {
     private readonly IBus _bus;
 
